@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Coffee Understands!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="static/images/coffee.ico">
+	<style>
+  .bg-1 {
+    background-color: #4d2600;
+    color: #ffffff;
+  }
+	.text-1 {
+    background-color: #ffffff;
+    color: #663300;
+  }
+  </style>
+</head>
+
+<header class="jumbotron text-center">
+	<div class="text-1">
+  	<p><h1>Coffee Understands..</h1></p>
+		</div>
+</header>
+
+<body class="bg-1">
+	<div class="row">
+	 	<div class="col-md-4">
+			<img src="static/images/excited.jpg" class="img-circle"  width="350" height="350">
+		</div>
+		<div class="col-md-4">
+			<form id="msgform" action="/moveon" method="post"  >
+				<script type="text/javascript">
+	    		window.onload=function(){
+						var counter = 5;
+	     			var interval = setInterval(function() {
+	         			counter--;
+	         			$("#seconds").text(counter);
+	         			if (counter == 0) {
+	             	  redirect();
+	             	  clearInterval(interval);
+	          		}
+							  }, 1000);
+						  function redirect() {
+	              document.getElementById('order_ack').click();
+	            }
+						};
+				</script>
+				<h3>The order has been placed !</h3>
+				<p><input type="submit" style="display: none;" id="order_ack"></input></p>
+			</form>
+		</div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>

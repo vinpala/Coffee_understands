@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Coffee Understands!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="static/images/coffee.ico">
+	<style>
+  .bg-1 {
+    background-color: #4d2600;
+    color: #ffffff;
+  }
+	.text-1 {
+    background-color: #ffffff;
+    color: #663300;
+  }
+  </style>
+</head>
+
+<header class="jumbotron text-center">
+	<div class="text-1">
+  	<p><h1>Coffee Understands..</h1></p>
+		</div>
+</header>
+
+<body class="bg-1">
+	<div class="row">
+	 	<div class="col-md-4">
+			<img src="static/images/geek.jpg" class="img-circle"  width="350" height="350">
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="name">Your Name :</label>
+				<input type="text" class="form-control" id="name">
+			</div>
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+							<label for="personality">What kind of person are you ?</label>
+							<input type="radio" name="personality" id="laid-back" value="laid-back"> Laid Back  </input><br>
+					    <input type="radio" name="personality" id="adventurous" value="adventurous"> Adventurous </input><br>
+							<input type="radio" name="personality" id="old-school" value="old school"> Old School-er </input><br>
+				    </div>
+				    <div class="carousel-item">
+							<label for="coffeewhen">What goes best with your coffee ?</label>
+							<input type="radio" name="coffeewhen" id="friends" value="friends"> A group of Friends  </input><br>
+					    <input type="radio" name="coffeewhen" id="quiet" value="quiet"> A quiet time alone </input><br>
+							<input type="radio" name="coffeewhen" id="work" value="work"> Work..work..work </input><br>
+				    </div>
+				    <div class="carousel-item">
+							<label for="tastes">What flavors are your favorite ?</label>
+							<input type="radio" name="tastes" id="nuts" value="nuts"> Roasted nuts  </input><br>
+							<input type="radio" name="tastes" id="cocoa" value="cocoa"> Cocoa </input><br>
+							<input type="radio" name="tastes" id="chichory" value="chichory"> Chichory </input><br>
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+			</div>
+			<button type="button" class="btn btn-primary" type="submit" value="enroll">Enroll</button>
+		</div>
+	</div>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>
